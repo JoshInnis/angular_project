@@ -38,11 +38,5 @@ export class PassengerDashboardComponent {
       checkedIn: false,
     }];
   
-  }
-
-  uppercase(value: Passenger) {
-    return value.fullname.toLocaleUpperCase();
-  }
-
-  
+  }  
 }
