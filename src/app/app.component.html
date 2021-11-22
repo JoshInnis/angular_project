@@ -10,6 +10,9 @@
       <div class="date">
         Check in date: {{ passenger.checkInDate ? (passenger.checkInDate | date: 'MMMM y, d' | uppercase ) : 'Not checked in' }}
       </div>
+      <div class="children">
+        children: {{ passenger.children?.length || 0}}
+      </div>
     </li>
   </ul>
 
