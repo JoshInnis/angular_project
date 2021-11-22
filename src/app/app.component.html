@@ -1,9 +1,11 @@
 <div class="app">
   <button (click)="handleClick()">button</button>
   <input type="text"
-    [value]="name" 
-    (input)="handleInput($event)"
-    (blur)="handleBlur($event)"
+    [ngModel] = "name"
+    (ngModelChange)="handleChange($event)"
+  >
+  <input type="text"
+    [(ngModel)] = "name"
   >
   <div>{{ name }}</div>
 </div>

@@ -8,13 +8,9 @@ import { Component } from "@angular/core";
 export class AppComponent {
   name: string ="Josh";
 
-  handleBlur(event: any) {
-    this.name = event.target.value;
-    console.log(event);
-  }
 
-  handleInput(event: any) {
-    this.name = event.target.value;
+  handleChange(event: string) {
+    this.name = event;
   }
 
   handleClick() {
