@@ -1,7 +1,6 @@
 // angular
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-//import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 
 // routing
@@ -18,8 +17,7 @@ import { AppComponent } from "./app.component";
   imports: [
     AppRoutingModule,
     BrowserModule,
-    CommonModule//,
-    //FormsModule
+    CommonModule
   ],
   bootstrap: [AppComponent]
 })
