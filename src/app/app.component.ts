@@ -8,12 +8,8 @@ import { Component } from "@angular/core";
 export class AppComponent {
   name: string ="Josh";
 
-
-  handleChange(event: string) {
-    this.name = event;
-  }
-
-  handleClick() {
-    this.name = "Innis";
+  handleClick(value: string) {
+    console.log(value)
+    this.name = value;
   }
 }
