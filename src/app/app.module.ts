@@ -8,16 +8,19 @@ import { AppRoutingModule } from "./app-routing.module";
 
 // components
 import { AppComponent } from "./app.component";
-
+import { PassengerDashboardModule } from "./passenger-dashboard/passenger-dashboard.module";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
+    //angular modules
     AppRoutingModule,
     BrowserModule,
-    CommonModule
+    CommonModule,
+    // custom modules
+    PassengerDashboardModule
   ],
   bootstrap: [AppComponent]
 })
