@@ -1,9 +1,8 @@
 <div class="app">
-  <button (click)="handleClick(username.value)">button</button>
-
-  <input type="text" #username>
-  
-  <div *ngIf="name.length > 2">
-    Searching for ... {{ name }}
-  </div>
+  <h3>Airline Passengers</h3>
+  <ul>
+    <li *ngFor="let passenger of passengers; let i = index;">
+      {{ i }}: {{ passenger.fullname }}
+    </li>
+  </ul>
 </div>
