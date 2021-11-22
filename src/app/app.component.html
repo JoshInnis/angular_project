@@ -1,7 +1,9 @@
 <div class="app">
-  <h1>{{ title }}</h1>
-  <h1 [innerHTML]="title"></h1>
-  <img [src]="logo"/>
-  <input type="text" [value]="name">
+  <button (click)="handleClick()">button</button>
+  <input type="text"
+    [value]="name" 
+    (input)="handleInput($event)"
+    (blur)="handleBlur($event)"
+  >
   <div>{{ name }}</div>
 </div>

@@ -6,12 +6,18 @@ import { Component } from "@angular/core";
   templateUrl: 'app.component.html'
 })
 export class AppComponent {
-  title: string;
-  logo: string = 'https://avatars.githubusercontent.com/u/7564930?v=4';
-  name: string ="Josh"
+  name: string ="Josh";
 
-  constructor() {
-    this.title = 'Ultimate Angular'
+  handleBlur(event: any) {
+    this.name = event.target.value;
+    console.log(event);
   }
 
+  handleInput(event: any) {
+    this.name = event.target.value;
+  }
+
+  handleClick() {
+    this.name = "Innis";
+  }
 }
