@@ -1,18 +1,4 @@
 <div class="passenger-dashboard">
   <passenger-count [items]="passengers"></passenger-count>
-    <passenger-detail></passenger-detail>
-    <ul>
-      <li *ngFor="let passenger of passengers; let i = index;">
-        <span
-          class="status"
-          [class.checked-in]="passenger.checkedIn"></span>
-        {{ i }}: {{ passenger.fullname }}
-        <div class="date">
-          Check in date: {{ passenger.checkInDate ? (passenger.checkInDate | date: 'MMMM y, d' | uppercase ) : 'Not checked in' }}
-        </div>
-        <div class="children">
-          children: {{ passenger.children?.length || 0 }}
-        </div>
-      </li>
-    </ul>
+  <passenger-detail *ngFor="let passenger of passengers" [detail]="passenger" (edit)='handleEdit($event)' (remove)="handleRemove($event)"></passenger-detail>
 </div>

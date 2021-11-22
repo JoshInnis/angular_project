@@ -39,4 +39,12 @@ export class PassengerDashboardComponent {
     }];
   
   }  
+
+  handleEdit(event: any) {
+    console.log(event);
+  }
+
+  handleRemove(event: any) {
+    console.log(event);
+  }
 }

@@ -1,4 +1,18 @@
-<div class="">
-  Detail Component
-    
+<div>
+    <span class="status" [class.checked-in]="detail ? detail.checkedIn : false"></span>
+    <div *ngIf="editing">
+      <input type="text" [value]="detail ? detail.fullname : ''" (input)="onNameChange(name.value)" #name>
     </div>
+  <div>
+    {{ detail ? detail.fullname : "" }}
+  </div>
+  <div class="date">
+    Check in date:
+    {{ detail && detail.checkInDate ? (detail.checkInDate | date: 'MMMM y, d' | uppercase ) : 'Not checked in' }}
+  </div>
+  <div class="children">
+    Children: {{ getChildren() }}
+  </div>
+  <button (click)=toggleEdit()>{{ editing ? "Done" : "Edit"}}</button>
+  <button (click)=onRemove()>Remove</button>
+</div>
