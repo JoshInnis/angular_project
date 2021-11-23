@@ -37,8 +37,7 @@ export class PassengerDashboardComponent {
       fullname: 'Tina',
       checkedIn: false,
     }];
-  
-  }  
+  }
 
   handleEdit(event: Passenger) {
     this.passengers = this.passengers.map((passenger: Passenger) => {
