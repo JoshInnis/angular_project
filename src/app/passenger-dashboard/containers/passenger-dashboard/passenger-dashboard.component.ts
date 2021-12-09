@@ -15,7 +15,10 @@ export class PassengerDashboardComponent {
   constructor(private passengerService: PassengerDashboardService) {}
 
   ngOnInit() {
-    this.passengers = this.passengerService.getPassengers();
+    this.passengerService.getPassengers()
+      .subscribe(res => {
+        this.passengers = res;
+      });
   }
 
   handleEdit(event: Passenger) {

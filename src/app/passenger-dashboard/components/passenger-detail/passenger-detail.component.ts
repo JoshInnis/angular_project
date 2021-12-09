@@ -26,12 +26,14 @@ export class PassengerDetailComponent implements OnChanges {
   }
 
   getChildren() {
-    if (this.detail?.children) return this.detail?.children.length;
+    if (this.detail?.children) {
+      return this.detail?.children.length;
+    }
     return 0;
   }
 
   onNameChange(value: string) {
-    if (this.detail)
+    if (this.detail) 
       this.detail.fullname = value;
   }
 
